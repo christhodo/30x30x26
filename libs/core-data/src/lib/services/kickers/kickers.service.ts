@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Kicker } from '@kicker-angular/api-interfaces';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'apps/dashboard/src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class KickersService {
-  model = 'kickers';
+  model = 'photos';
 
   constructor(private http: HttpClient) {}
 

@@ -40,8 +40,9 @@ export const getSelectedKickerId = createSelector(
 
 const emptyKicker: Kicker = {
   id: null,
+  url: '',
   title: '',
-  description: '',
+  thumbnailUrl: '',
 };
 
 export const getSelectedKicker = createSelector(
