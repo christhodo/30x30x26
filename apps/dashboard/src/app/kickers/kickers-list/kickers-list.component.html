@@ -1,0 +1,29 @@
+<mat-card>
+  <mat-card-title>
+    Kickers
+  </mat-card-title>
+  <mat-card-content>
+    <mat-list data-cy="kickers-list">
+      <mat-list-item
+        *ngFor="let kicker of kickers"
+        attr.data-cy="kicker-{{ kicker.id }}-item"
+        class="mat-list-option"
+        (click)="selected.emit(kicker)"
+      >
+        <span matLine attr.data-cy="kicker-{{ kicker.id }}-item-title">{{
+          kicker.title
+        }}</span>
+        <button
+          *ngIf="!readonly"
+          attr.data-cy="delete-kicker-{{ kicker.id }}-btn"
+          mat-icon-button
+          type="button"
+          color="warn"
+          (click)="deleted.emit(kicker); $event.stopImmediatePropagation()"
+        >
+          <mat-icon>clear</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

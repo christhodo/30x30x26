@@ -1,0 +1,18 @@
+<div class="component-container">
+  <div class="list-component">
+    <kicker-angular-kickers-list
+      [kickers]="allKickers$ | async"
+      (selected)="selectKicker($event)"
+      (deleted)="deleteKicker($event)"
+    >
+    </kicker-angular-kickers-list>
+  </div>
+  <div class="details-component">
+    <kicker-angular-kicker-details
+      [kicker]="selectedKicker$ | async"
+      (saved)="saveKicker($event)"
+      (cancelled)="resetForm()"
+    >
+    </kicker-angular-kicker-details>
+  </div>
+</div>
