@@ -13,5 +13,6 @@ export interface BaseEntity {
 
 export interface Kicker extends BaseEntity {
   title: string;
-  description: string;
+  url: string;
+  thumbnailUrl: string;
 }
